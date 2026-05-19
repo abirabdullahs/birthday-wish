@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Happy Birthday Mili 🌸</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Hind+Siliguri:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --blush: #FFD1DC;
+    --rose: #F4A7B9;
+    --deep-rose: #C0637A;
+    --lavender: #E8D5F5;
+    --purple: #9B72CF;
+    --midnight: #1a0a2e;
+    --dark-purple: #2d1b4e;
+    --gold: #FFD700;
+    --rose-gold: #B76E79;
+    --cream: #FFF8F0;
+    --text-light: #fff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Hind Siliguri', 'Poppins', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background: #000;
+  }
+
+  /* ===== STEP SYSTEM ===== */
+  .step {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+    overflow: hidden;
+  }
+  .step.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .step.fade-out {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* ===== STEP 1: TEASER ===== */
+  #step1 {
+    background: radial-gradient(ellipse at center, #1a0a2e 0%, #000 100%);
+  }
+  .star-field {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+  .star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle var(--dur) ease-in-out infinite;
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.1; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.3); }
+  }
+  .teaser-content {
+    position: relative;
+    text-align: center;
+    z-index: 10;
+    padding: 2rem;
+  }
+  .teaser-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(1.6rem, 6vw, 2.8rem);
+    color: #fff;
+    text-shadow: 0 0 30px rgba(255,209,220,0.8);
+    animation: breathe 3s ease-in-out infinite;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+    white-space: pre-line;
+  }
+  @keyframes breathe {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+  }
+  .glow-btn {
+    background: transparent;
+    border: 2px solid var(--blush);
+    color: var(--blush);
+    font-family: 'Hind Siliguri', 'Poppins', sans-serif;
+    font-size: clamp(0.85rem, 3vw, 1rem);
+    font-weight: 500;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 20px rgba(255,209,220,0.3), inset 0 0 20px rgba(255,209,220,0.05);
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  .glow-btn:hover, .glow-btn:active {
+    background: rgba(255,209,220,0.15);
+    box-shadow: 0 0 40px rgba(255,209,220,0.6), inset 0 0 20px rgba(255,209,220,0.1);
+    transform: scale(1.05);
+  }
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(255,209,220,0.3); }
+    50% { box-shadow: 0 0 40px rgba(255,209,220,0.7), 0 0 60px rgba(255,209,220,0.3); }
+  }
+
+  /* ===== STEP 2: GRAND REVEAL ===== */
+  #step2 {
+    background: linear-gradient(135deg, #2d1b4e 0%, #1a0a2e 40%, #3d1a3a 100%);
+  }
+  .reveal-content {
+    position: relative;
+    text-align: center;
+    z-index: 10;
+    padding: 2rem;
+  }
+  .birthday-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(3rem, 12vw, 7rem);
+    background: linear-gradient(135deg, var(--blush), var(--rose-gold), var(--lavender));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    filter: drop-shadow(0 0 20px rgba(255,209,220,0.5));
+    animation: title-in 1s ease forwards;
+    margin-bottom: 0.5rem;
+  }
+  .birthday-title-bn {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--blush), var(--rose-gold), var(--lavender));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 20px rgba(255,209,220,0.5));
+    animation: title-in 1s ease forwards;
+    margin-bottom: 0.5rem;
+  }
+  @keyframes title-in {
+    from { opacity: 0; transform: translateY(30px) scale(0.8); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .birthday-sub {
+    font-family: 'Hind Siliguri', 'Poppins', sans-serif;
+    font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+    color: rgba(255,209,220,0.8);
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+    animation: fade-up 1s ease 0.5s both;
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .next-btn {
+    animation: fade-up 1s ease 1.5s both;
+  }
+  
+  /* Confetti */
+  .confetti-piece {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    top: -10px;
+    border-radius: 2px;
+    animation: confetti-fall linear forwards;
+    z-index: 5;
+  }
+  @keyframes confetti-fall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+  }
+
+  /* ===== STEP 3: GIFT BOX ===== */
+  #step3 {
+    background: linear-gradient(160deg, #1a0a2e, #3d1a3a, #2d1b4e);
+  }
+  .gift-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 10;
+    padding: 2rem;
+    text-align: center;
+  }
+  .gift-prompt {
+    font-family: 'Hind Siliguri', 'Dancing Script', cursive;
+    font-size: clamp(1.2rem, 4.5vw, 1.8rem);
+    color: var(--blush);
+    text-shadow: 0 0 20px rgba(255,209,220,0.5);
+    font-weight: 500;
+  }
+  .gift-box-wrapper {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    animation: gift-shake 2s ease-in-out infinite;
+  }
+  .gift-box-wrapper:hover { transform: scale(1.1); animation: none; }
+  @keyframes gift-shake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg) scale(1.02); }
+    75% { transform: rotate(3deg) scale(1.02); }
+  }
+  .gift-box {
+    width: clamp(140px, 35vw, 200px);
+    height: clamp(130px, 32vw, 180px);
+    background: linear-gradient(135deg, #C0637A, #9B72CF);
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(155,114,207,0.5);
+    overflow: hidden;
+  }
+  .gift-box::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: rgba(255,255,255,0.2);
+  }
+  .gift-box::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    background: rgba(255,255,255,0.2);
+  }
+  .gift-lid {
+    width: clamp(160px, 38vw, 220px);
+    height: clamp(50px, 12vw, 70px);
+    background: linear-gradient(135deg, #9B72CF, #C0637A);
+    border-radius: 10px;
+    position: relative;
+    top: 0;
+    transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 10px 40px rgba(155,114,207,0.5);
+    z-index: 2;
+  }
+  .gift-lid.open {
+    transform: translateY(-80px) rotate(-15deg);
+  }
+  .gift-bow {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+  }
+  .gift-reveal {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease 0.5s;
+    pointer-events: none;
+    font-size: 3rem;
+    z-index: 1;
+  }
+  .gift-reveal.show {
+    opacity: 1;
+    transform: translateY(-5px);
+    pointer-events: all;
+  }
+  .gift-quote {
+    font-family: 'Hind Siliguri', 'Dancing Script', cursive;
+    font-size: clamp(0.9rem, 3vw, 1.05rem);
+    color: rgba(255,209,220,0.9);
+    max-width: 290px;
+    text-align: center;
+    line-height: 1.7;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease 1.2s;
+    font-weight: 400;
+  }
+  .gift-quote.show { opacity: 1; transform: translateY(0); }
+  .more-btn-wrapper {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease 2s;
+  }
+  .more-btn-wrapper.show { opacity: 1; transform: translateY(0); }
+
+  /* ===== STEP 4: MEMORY LANE ===== */
+  #step4 {
+    background: linear-gradient(160deg, #2d1b4e, #1a0a2e);
+    overflow: hidden;
+  }
+  .memory-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    z-index: 10;
+    height: 100vh;
+    justify-content: center;
+  }
+  .memory-title {
+    font-family: 'Hind Siliguri', 'Great Vibes', cursive;
+    font-size: clamp(1.6rem, 6vw, 3rem);
+    color: var(--blush);
+    text-align: center;
+    text-shadow: 0 0 30px rgba(255,209,220,0.5);
+    font-weight: 600;
+  }
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+  }
+  .carousel-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .polaroid {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  .polaroid-frame {
+    background: #fff;
+    padding: 16px 16px 50px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.1);
+    transform: rotate(var(--rot, -2deg));
+    width: clamp(220px, 80vw, 300px);
+    position: relative;
+  }
+  .polaroid-img {
+    width: 100%;
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--blush), var(--lavender), var(--rose));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(3rem, 10vw, 5rem);
+    border-radius: 2px;
+  }
+  .polaroid-caption {
+    position: absolute;
+    bottom: 12px;
+    left: 0; right: 0;
+    text-align: center;
+    font-family: 'Hind Siliguri', 'Dancing Script', cursive;
+    font-size: clamp(0.8rem, 2.8vw, 0.95rem);
+    color: #555;
+    padding: 0 10px;
+    font-weight: 500;
+  }
+  .carousel-nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .nav-btn {
+    background: rgba(255,209,220,0.15);
+    border: 1px solid rgba(255,209,220,0.3);
+    color: var(--blush);
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .nav-btn:hover { background: rgba(255,209,220,0.3); transform: scale(1.1); }
+  .carousel-dots {
+    display: flex;
+    gap: 8px;
+  }
+  .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: rgba(255,209,220,0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .dot.active {
+    background: var(--blush);
+    transform: scale(1.3);
+  }
+  .final-btn-wrapper {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+  .final-btn-wrapper.show { opacity: 1; transform: translateY(0); }
+
+  /* ===== STEP 5: KOBITA ===== */
+  #step5 {
+    background: radial-gradient(ellipse at 30% 20%, #1a1040 0%, #0d0520 50%, #1a0a2e 100%);
+    overflow-y: auto;
+  }
+  .kobita-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    z-index: 10;
+    padding: 3rem 1.5rem;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    min-height: 100vh;
+    justify-content: center;
+  }
+  .kobita-title {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: clamp(1.4rem, 5vw, 2rem);
+    color: var(--blush);
+    text-shadow: 0 0 30px rgba(255,209,220,0.6);
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .kobita-stanza {
+    text-align: center;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.9s ease;
+    width: 100%;
+  }
+  .kobita-stanza.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .kobita-line {
+    font-family: 'Hind Siliguri', serif;
+    font-size: clamp(1rem, 3.5vw, 1.2rem);
+    color: rgba(255,220,235,0.92);
+    line-height: 2;
+    font-weight: 400;
+    text-shadow: 0 0 15px rgba(255,150,180,0.3);
+  }
+  .kobita-line.bold-line {
+    font-weight: 600;
+    color: var(--blush);
+    font-size: clamp(1.05rem, 3.8vw, 1.25rem);
+  }
+  .kobita-divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--rose), transparent);
+    margin: 1rem auto;
+    opacity: 0.5;
+  }
+  .kobita-ornament {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    opacity: 0.6;
+  }
+  .kobita-next-btn {
+    margin-top: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+  }
+  .kobita-next-btn.show { opacity: 1; transform: translateY(0); }
+
+  /* ===== STEP 6: SECRET LETTER ===== */
+  #step6 {
+    background: radial-gradient(ellipse at 30% 20%, #3d1a3a 0%, #1a0a2e 50%, #0d0520 100%);
+  }
+  .letter-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    z-index: 10;
+    padding: 2rem 1.5rem;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .letter-title {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: clamp(1.6rem, 6vw, 2.5rem);
+    color: var(--blush);
+    text-shadow: 0 0 30px rgba(255,209,220,0.5);
+    text-align: center;
+    font-weight: 600;
+  }
+  .envelope-wrapper {
+    cursor: pointer;
+    perspective: 1000px;
+    width: clamp(200px, 70vw, 280px);
+  }
+  .envelope {
+    position: relative;
+    width: 100%;
+    padding-bottom: 65%;
+    background: linear-gradient(135deg, #C0637A, #9B72CF);
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(155,114,207,0.4);
+    transition: transform 0.6s ease;
+    cursor: pointer;
+  }
+  .envelope:hover { transform: translateY(-5px); }
+  .envelope-flap {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 60%;
+    background: linear-gradient(135deg, #9B72CF, #C0637A);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    border-radius: 8px 8px 0 0;
+    transform-origin: top;
+    transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 2;
+  }
+  .envelope-flap.open { transform: rotateX(-180deg); }
+  .envelope-seal {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    z-index: 3;
+    transition: all 0.3s ease;
+  }
+  .envelope-flap.open ~ .envelope-seal { opacity: 0; }
+  .envelope-hint {
+    font-family: 'Hind Siliguri', 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255,209,220,0.5);
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  /* Letter Paper */
+  .letter-paper {
+    display: none;
+    background: var(--cream);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+    animation: paper-unfold 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  .letter-paper.show { display: block; }
+  @keyframes paper-unfold {
+    from { transform: scaleY(0) translateY(-50px); opacity: 0; }
+    to { transform: scaleY(1) translateY(0); opacity: 1; }
+  }
+  .letter-paper::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: rgba(255,150,170,0.3);
+  }
+  .letter-lines::before {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    background: repeating-linear-gradient(
+      transparent,
+      transparent 31px,
+      rgba(200,200,255,0.15) 31px,
+      rgba(200,200,255,0.15) 32px
+    );
+    pointer-events: none;
+  }
+  .letter-date {
+    font-family: 'Dancing Script', cursive;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1rem;
+    text-align: right;
+  }
+  .letter-body {
+    font-family: 'Hind Siliguri', 'Dancing Script', cursive;
+    font-size: clamp(0.95rem, 3.2vw, 1.1rem);
+    color: #333;
+    line-height: 2;
+    position: relative;
+    z-index: 1;
+  }
+  .letter-sign {
+    font-family: 'Hind Siliguri', 'Great Vibes', cursive;
+    font-size: clamp(1.2rem, 4.5vw, 1.7rem);
+    color: var(--deep-rose);
+    text-align: right;
+    margin-top: 1.5rem;
+    font-weight: 600;
+  }
+
+  /* Floating hearts */
+  .floating-heart {
+    position: fixed;
+    font-size: 1.2rem;
+    animation: float-up linear forwards;
+    pointer-events: none;
+    z-index: 1;
+  }
+  @keyframes float-up {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+  }
+
+  /* Floating particles step 6 */
+  .magic-particle {
+    position: fixed;
+    pointer-events: none;
+    z-index: 1;
+    animation: magic-float linear forwards;
+    font-size: 0.8rem;
+    opacity: 0.6;
+  }
+  @keyframes magic-float {
+    0% { transform: translateY(100vh) scale(0); opacity: 0; }
+    10% { opacity: 0.6; transform: scale(1); }
+    90% { opacity: 0.4; }
+    100% { transform: translateY(-10vh) scale(0.5); opacity: 0; }
+  }
+
+  /* ===== PROGRESS DOTS ===== */
+  .progress-indicator {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .progress-indicator.show { opacity: 1; }
+  .prog-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: rgba(255,209,220,0.3);
+    transition: all 0.4s ease;
+  }
+  .prog-dot.done { background: var(--blush); }
+  .prog-dot.current {
+    background: var(--blush);
+    width: 20px;
+    border-radius: 3px;
+    box-shadow: 0 0 8px rgba(255,209,220,0.6);
+  }
+
+  /* Music button */
+  .music-btn {
+    position: fixed;
+    top: 16px; right: 16px;
+    background: rgba(255,209,220,0.15);
+    border: 1px solid rgba(255,209,220,0.3);
+    color: var(--blush);
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    z-index: 200;
+    display: none;
+    align-items: center; justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+  .music-btn.visible { display: flex; }
+  .music-btn:hover { background: rgba(255,209,220,0.3); }
+  .music-note { animation: spin-music 2s linear infinite; display: inline-block; }
+  @keyframes spin-music {
+    0%, 100% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+  }
+  .music-paused .music-note { animation: none; opacity: 0.5; }
+
+  /* Step 4 swipe */
+  .carousel-container { touch-action: pan-y; }
+
+  /* Scrollbar */
+  .letter-paper::-webkit-scrollbar { width: 4px; }
+  .letter-paper::-webkit-scrollbar-track { background: transparent; }
+  .letter-paper::-webkit-scrollbar-thumb { background: var(--rose); border-radius: 2px; }
+  #step5::-webkit-scrollbar { width: 3px; }
+  #step5::-webkit-scrollbar-track { background: transparent; }
+  #step5::-webkit-scrollbar-thumb { background: rgba(255,150,180,0.3); border-radius: 2px; }
+
+  /* Responsive tweaks */
+  @media (max-height: 700px) {
+    .memory-section { gap: 0.8rem; }
+    .polaroid-frame { padding: 10px 10px 40px; }
+    .letter-section { gap: 1rem; }
+    .kobita-section { gap: 0; padding: 2rem 1.5rem; }
+  }
+
+  /* Shimmer effect for kobita background */
+  #step5::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(155,114,207,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255,150,180,0.07) 0%, transparent 50%),
+      radial-gradient(circle at 60% 80%, rgba(232,213,245,0.06) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- Music button -->
+<button class="music-btn" id="musicBtn" onclick="toggleMusic()" title="মিউজিক">
+  <span class="music-note">♪</span>
+</button>
+
+<!-- Progress -->
+<div class="progress-indicator" id="progressDots"></div>
+
+<!-- ===== STEP 1: TEASER ===== -->
+<div class="step active" id="step1">
+  <div class="star-field" id="starField"></div>
+  <div class="teaser-content">
+    <div class="teaser-text" id="teaserText"></div>
+    <button class="glow-btn" onclick="goToStep(2)" id="lightsBtn" style="opacity:0">
+      Please turn on the light 💡
+    </button>
+  </div>
+</div>
+
+<!-- ===== STEP 2: GRAND REVEAL ===== -->
+<div class="step" id="step2">
+  <div id="confettiContainer" style="position:fixed;inset:0;pointer-events:none;z-index:5;"></div>
+  <div class="reveal-content">
+    <div class="birthday-title-bn">শুভ জন্মদিন</div>
+    <div class="birthday-title" style="font-size: clamp(4rem, 16vw, 9rem); margin-top: -0.5rem;">Mili! 🌸</div>
+    <div class="birthday-sub">Happy Birthday, Sunshine ☀️</div>
+    <div class="next-btn">
+      <button class="glow-btn" onclick="goToStep(3)">Something special is waiting ahead 🌸 🎁</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== STEP 3: GIFT BOX ===== -->
+<div class="step" id="step3">
+  <div class="gift-section">
+    <div class="gift-prompt">A little something, made just for you 💖👀</div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+      <div class="gift-lid" id="giftLid">
+        <div class="gift-bow">🎀</div>
+      </div>
+      <div class="gift-box-wrapper" id="giftBoxWrapper" onclick="openGift()">
+        <div class="gift-box">
+          <div class="gift-reveal" id="giftReveal">💐<br><span style="font-size:1.2rem">🌸🌺🌷</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="gift-quote" id="giftQuote">
+      "তুমি আমার জীবনের সবচেয়ে সুন্দর অধ্যায় — ফুলে ভরা এক বাগানের মতো, অথচ কেমন যেন বিরল। 🌸" 🌸
+    </div>
+    <div class="more-btn-wrapper" id="moreBtnWrapper">
+      <button class="glow-btn" onclick="goToStep(4)">Just wait… there’s more ✨</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== STEP 4: MEMORY LANE ===== -->
+<div class="step" id="step4">
+  <div class="memory-section">
+    <div class="memory-title">আমাদের ছোট্ট মুহূর্তগুলো ✨</div>
+    <div class="carousel-container" id="carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <!-- Slides injected by JS -->
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <button class="nav-btn" onclick="prevSlide()">←</button>
+      <div class="carousel-dots" id="carouselDots"></div>
+      <button class="nav-btn" onclick="nextSlide()">→</button>
+    </div>
+    <div class="final-btn-wrapper" id="finalBtnWrapper">
+      <button class="glow-btn" onclick="goToStep(5)">Just for you… there’s more 💌</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== STEP 5: KOBITA PART 1 ===== -->
+<div class="step" id="step5">
+  <div class="kobita-section" id="kobitaSection">
+    <div class="kobita-title">✦ কাজল চোখের মেয়ে ✦</div>
+
+    <!-- Stanza 1 -->
+    <div class="kobita-stanza" id="ks1">
+      <div class="kobita-ornament">🌸</div>
+      <div class="kobita-line bold-line">কাজল চোখের মেয়ে</div>
+      <div class="kobita-line">আমার দিবস কাটে, বিবশ হয়ে</div>
+      <div class="kobita-line">তোমার চোখে চেয়ে।</div>
+    </div>
+
+    <div class="kobita-divider"></div>
+
+    <!-- Stanza 2 -->
+    <div class="kobita-stanza" id="ks2">
+      <div class="kobita-ornament">🌙</div>
+      <div class="kobita-line">দহনের দিনে কিছু মেঘ কিনে</div>
+      <div class="kobita-line">যদি ভাসে মধ্য দুপুর</div>
+      <div class="kobita-line">তবু মেয়ে জানে তার চোখ মানে</div>
+      <div class="kobita-line">কারো বুক পদ্মপুকুর।</div>
+    </div>
+
+    <div class="kobita-next-btn" id="kobitaNextBtn1">
+      <button class="glow-btn" onclick="goToStep(6)">পরবর্তী ✨</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== STEP 6: KOBITA PART 2 ===== -->
+<div class="step" id="step6">
+  <div class="kobita-section" id="kobitaSection2">
+    <div class="kobita-title">✦ কাজল চোখের মেয়ে ✦</div>
+
+    <!-- Stanza 3 -->
+    <div class="kobita-stanza" id="ks3">
+      <div class="kobita-ornament">✨</div>
+      <div class="kobita-line">এই যে মেয়ে কাজল চোখ</div>
+      <div class="kobita-line">তোমার বুকে আমায় চেয়ে</div>
+      <div class="kobita-line bold-line">তীব্র দাবির মিছিল হোক</div>
+    </div>
+
+    <div class="kobita-divider"></div>
+
+    <!-- Stanza 4 -->
+    <div class="kobita-stanza" id="ks4">
+      <div class="kobita-ornament">💫</div>
+      <div class="kobita-line">তাকাস কেন? আঁকাস কেন</div>
+      <div class="kobita-line">বুকের ভেতর আকাশ?</div>
+    </div>
+
+    <div class="kobita-next-btn" id="kobitaNextBtn2">
+      <button class="glow-btn" onclick="goToStep(7)">শেষ অংশ ❤️</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== STEP 7: KOBITA PART 3 ===== -->
+<div class="step" id="step7">
+  <div class="kobita-section" id="kobitaSection3">
+    <div class="kobita-title">✦ কাজল চোখের মেয়ে ✦</div>
+
+    <!-- Stanza 5 -->
+    <div class="kobita-stanza" id="ks5">
+      <div class="kobita-ornament">🌺</div>
+      <div class="kobita-line bold-line">কাজল চোখের মেয়ে</div>
+      <div class="kobita-line">তুই তাকালে থমকে থাকে</div>
+      <div class="kobita-line bold-line">আমার বুকের বাঁ পাশ।</div>
+    </div>
+
+    <div class="kobita-divider"></div>
+    <div style="height:1rem;"></div>
+
+    <div class="kobita-next-btn" id="kobitaNextBtn3">
+      <button class="glow-btn" onclick="goToStep(8)">শেষ চিঠিটা পড়বে? 💌</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== STEP 8: SECRET LETTER ===== -->
+<div class="step" id="step8">
+  <div class="letter-section">
+    <div class="letter-title">তোমার জন্য একটি চিঠি 💌</div>
+    <div id="envelopeWrapper" class="envelope-wrapper" onclick="openEnvelope()">
+      <div class="envelope" id="envelope">
+        <div class="envelope-flap" id="envelopeFlap"></div>
+        <div class="envelope-seal" id="envelopeSeal">💌</div>
+      </div>
+      <div class="envelope-hint" style="margin-top:0.8rem">ট্যাপ করে খোলো ✨</div>
+    </div>
+    <div class="letter-paper" id="letterPaper">
+      <div class="letter-lines">
+        <div class="letter-date">২০শে মে, ২০২৬ 🌸</div>
+        <div class="letter-body">
+          প্রিয় মিলি,<br><br>
+
+আজ পৃথিবীটা যেন একটু বেশি নরম, একটু বেশি সুন্দর — কারণ আজ তোমার জন্মদিন। 🌸<br><br>
+জানো, তোমাকে পাওয়া আমার জীবনের সবচেয়ে সুন্দর অনুভূতিগুলোর একটি। তুমি এমন একজন, যিনি সাধারণ মুহূর্তগুলোকে ভালোবাসায় ভরে দাও, আর নীরব দিনগুলোকে করে তোলো স্মৃতির মতো অমূল্য।<br><br>
+তোমার হাসি আমার কাছে শুধু একটা হাসি না — এটা সেই শান্তি, যেটা হাজারটা ক্লান্ত দিনের ভেতরও আমাকে বাঁচিয়ে রাখে। আর তুমি… তুমি এমন একজন, যাকে অনুভব করা যায়, ব্যাখ্যা করা যায় না। 💖<br><br>
+আজকের এই বিশেষ দিনে আমি শুধু এটুকুই চাই — তোমার প্রতিটি স্বপ্ন তোমার হাতে এসে ধরা দিক, প্রতিটি হাসি তোমার চোখে স্থায়ী হয়ে থাকুক, আর প্রতিটি দিন তোমার জন্য একটু বেশি সুন্দর হয়ে উঠুক। 🌺<br><br>
+তুমি আমাকে শিখিয়েছ কীভাবে কাউকে নিঃশব্দে ভালোবাসতে হয়, কীভাবে কারও উপস্থিতি নিজেই একটা আশীর্বাদ হতে পারে। তোমার সাথে কাটানো প্রতিটি মুহূর্ত — দেখা হওয়া, কথা বলা, এমনকি ছোট ছোট নীরবতাগুলোও — আমার হৃদয়ের সবচেয়ে প্রিয় অংশ হয়ে আছে।<br><br>
+তুমি আমার জীবনে এসে যেন আলো জ্বালিয়ে দিয়েছ, যেটা আগে আমি কখনো অনুভবই করিনি। তোমাকে ধন্যবাদ, শুধু তুমি হওয়ার জন্য। ✨<br><br>
+শুভ জন্মদিন, মিলি। আজ শুধু তুমি না — আমার সব অনুভূতিও তোমার জন্য। 💕<br><br>
+সবচেয়ে গভীর ভালোবাসা সহ, সবসময়,
+        </div>
+        <div class="letter-sign">তোমার অপ্রিয় রাগী ছেলেটা 🌹</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<audio id="bgMusic" loop>
+  <source src="./song.m4a" type="audio/mp4"/>
+</audio>
+
+<script>
+// ===== STARS =====
+function createStars() {
+  const field = document.getElementById('starField');
+  for (let i = 0; i < 120; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    const size = Math.random() * 3 + 1;
+    star.style.cssText = `
+      left: ${Math.random() * 100}%;
+      top: ${Math.random() * 100}%;
+      width: ${size}px;
+      height: ${size}px;
+      --dur: ${Math.random() * 3 + 2}s;
+      animation-delay: ${Math.random() * 3}s;
+    `;
+    field.appendChild(star);
+  }
+}
+createStars();
+
+// ===== TYPEWRITER =====
+function typewriter(el, text, speed, cb) {
+  let i = 0;
+  el.innerHTML = '';
+  const timer = setInterval(() => {
+    el.innerHTML += text[i];
+    i++;
+    if (i >= text.length) { clearInterval(timer); if (cb) cb(); }
+  }, speed);
+}
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const el = document.getElementById('teaserText');
+    typewriter(el, 'Hello Sweetheart... 🌙\nready? ✨', 80, () => {
+      setTimeout(() => {
+        const btn = document.getElementById('lightsBtn');
+        btn.style.transition = 'opacity 0.8s ease';
+        btn.style.opacity = '1';
+      }, 400);
+    });
+  }, 500);
+});
+
+// ===== STEP NAVIGATION =====
+let currentStep = 1;
+const totalSteps = 8;
+
+function updateProgress(step) {
+  const dots = document.getElementById('progressDots');
+  if (step < 2) { dots.classList.remove('show'); return; }
+  dots.classList.add('show');
+  dots.innerHTML = '';
+  for (let i = 2; i <= totalSteps; i++) {
+    const d = document.createElement('div');
+    d.className = `prog-dot ${i < step ? 'done' : i === step ? 'current' : ''}`;
+    dots.appendChild(d);
+  }
+}
+
+function goToStep(n) {
+  const from = document.getElementById(`step${currentStep}`);
+  const to = document.getElementById(`step${n}`);
+  from.classList.add('fade-out');
+  setTimeout(() => {
+    from.classList.remove('active', 'fade-out');
+    to.classList.add('active');
+    currentStep = n;
+    updateProgress(n);
+    onStepEnter(n);
+  }, 700);
+}
+
+function onStepEnter(n) {
+  if (n === 1) {
+    startMusic();
+    setTimeout(() => {
+      document.getElementById('musicBtn').classList.add('visible');
+    }, 1000);
+  }
+  if (n === 2) {
+    setTimeout(launchConfetti, 300);
+  }
+  if (n === 4) {
+    buildCarousel();
+    setupSwipe();
+  }
+  if (n === 5) {
+    animateKobita('kobitaSection', ['ks1', 'ks2'], 'kobitaNextBtn1');
+  }
+  if (n === 6) {
+    animateKobita('kobitaSection2', ['ks3', 'ks4'], 'kobitaNextBtn2');
+  }
+  if (n === 7) {
+    animateKobita('kobitaSection3', ['ks5'], 'kobitaNextBtn3');
+  }
+  if (n === 8) {
+    startMagicParticles();
+    startFloatingHearts();
+  }
+}
+
+// ===== CONFETTI =====
+function launchConfetti() {
+  const container = document.getElementById('confettiContainer');
+  const colors = ['#FFD1DC','#F4A7B9','#E8D5F5','#9B72CF','#FFD700','#C0637A','#B76E79'];
+  for (let i = 0; i < 120; i++) {
+    setTimeout(() => {
+      const piece = document.createElement('div');
+      piece.className = 'confetti-piece';
+      const size = Math.random() * 10 + 6;
+      piece.style.cssText = `
+        left: ${Math.random() * 100}%;
+        width: ${size}px;
+        height: ${size}px;
+        background: ${colors[Math.floor(Math.random() * colors.length)]};
+        border-radius: ${Math.random() > 0.5 ? '50%' : '2px'};
+        animation-duration: ${Math.random() * 3 + 2}s;
+        animation-delay: 0s;
+        transform: rotate(${Math.random() * 360}deg);
+      `;
+      container.appendChild(piece);
+      setTimeout(() => piece.remove(), 5000);
+    }, i * 30);
+  }
+}
+
+// ===== GIFT BOX =====
+let giftOpened = false;
+function openGift() {
+  if (giftOpened) return;
+  giftOpened = true;
+  document.getElementById('giftBoxWrapper').style.animation = 'none';
+  document.getElementById('giftLid').classList.add('open');
+  setTimeout(() => {
+    document.getElementById('giftReveal').classList.add('show');
+    document.getElementById('giftQuote').classList.add('show');
+    document.getElementById('moreBtnWrapper').classList.add('show');
+  }, 600);
+}
+
+// ===== CAROUSEL =====
+const slides = [
+  // START — The Beginning
+  { emoji: '💫', caption: 'সবকিছুর শুরুটা ছিল এক সাধারণ মুহূর্ত… কিন্তু আমার জন্য সেটা ছিল অপ্রত্যাশিত কিছু সুন্দর শুরু', rot: '-2deg' },
+
+  // MEMORY 1
+  { emoji: '💑', caption: 'সেই প্রথম দেখা… যেটা আজও মনে পড়লে সময় যেন একটু থেমে যায়', rot: '3deg' },
+
+  // MEMORY 2
+  { emoji: '🌙', caption: 'রাত জেগে তোমার সাথে হওয়া সব কথা… যেগুলো নিঃশব্দ রাতকেও সুন্দর করে দিত', rot: '-2deg' },
+
+  // MEMORY 3
+  { emoji: '🌸', caption: 'তোমার হাসি — আমার জীবনের সবচেয়ে প্রিয় দৃশ্য, যেটা আমি বারবার দেখতে চাই', rot: '2deg' },
+
+  // EMOTION BUILD-UP
+  { emoji: '🚶', caption: 'সব কিছু ফেলে শুধু তোমার সাথে কিছু মুহূর্ত চুরি করা… যেগুলো আমার কাছে পৃথিবী ছিল', rot: '-3deg' },
+
+  // CLIMAX
+  { emoji: '💖', caption: 'একসময় বুঝে গিয়েছিলাম… তুমি শুধু একটা মানুষ না, তুমি আমার অনুভূতির সবচেয়ে সুন্দর অংশ', rot: '3deg' },
+
+  // FINAL EMOTION PEAK
+  { emoji: '⭐', caption: 'তুমি থাকলেই সবকিছু অর্থ পায়… তুমি আমার জীবনের সেই আলো, যা কখনো নিভে না', rot: '-1deg' },
+
+  // ENDING
+  { emoji: '💌', caption: 'আর আজও… আমি শুধু একটাই চাই — তুমি সবসময় এমনই থেকো, আমার গল্পের সবচেয়ে সুন্দর অধ্যায় হয়ে', rot: '2deg' },
+];
+
+let currentSlide = 0;
+let slideCount = slides.length;
+
+function buildCarousel() {
+  const track = document.getElementById('carouselTrack');
+  const dotsEl = document.getElementById('carouselDots');
+  track.innerHTML = '';
+  dotsEl.innerHTML = '';
+
+  slides.forEach((s, i) => {
+    const slide = document.createElement('div');
+    slide.className = 'polaroid';
+    slide.innerHTML = `
+      <div class="polaroid-frame" style="--rot:${s.rot}">
+        <div class="polaroid-img">${s.emoji}</div>
+        <div class="polaroid-caption">${s.caption}</div>
+      </div>
+    `;
+    track.appendChild(slide);
+
+    const dot = document.createElement('div');
+    dot.className = `dot ${i === 0 ? 'active' : ''}`;
+    dot.onclick = () => goSlide(i);
+    dotsEl.appendChild(dot);
+  });
+
+  updateSlide();
+}
+
+function updateSlide() {
+  const track = document.getElementById('carouselTrack');
+  track.style.transform = `translateX(-${currentSlide * 100}%)`;
+  document.querySelectorAll('.dot').forEach((d, i) => {
+    d.className = `dot ${i === currentSlide ? 'active' : ''}`;
+  });
+  if (currentSlide === slideCount - 1) {
+    setTimeout(() => document.getElementById('finalBtnWrapper').classList.add('show'), 500);
+  }
+}
+
+function goSlide(n) {
+  currentSlide = Math.max(0, Math.min(n, slideCount - 1));
+  updateSlide();
+}
+function nextSlide() { goSlide(currentSlide + 1); }
+function prevSlide() { goSlide(currentSlide - 1); }
+
+function setupSwipe() {
+  const el = document.getElementById('carousel');
+  let startX = null;
+  el.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  el.addEventListener('touchend', e => {
+    if (startX === null) return;
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) diff > 0 ? nextSlide() : prevSlide();
+    startX = null;
+  }, { passive: true });
+}
+
+// ===== KOBITA ANIMATION =====
+function animateKobita(sectionId, stanzaIds, btnId) {
+  const stanzas = stanzaIds.map(id => document.getElementById(id));
+  stanzas.forEach((el, i) => {
+    if (el) {
+      el.classList.remove('visible');
+      setTimeout(() => {
+        if (el) el.classList.add('visible');
+      }, 300 + i * 600);
+    }
+  });
+  // Show next button after all stanzas appear
+  const btn = document.getElementById(btnId);
+  if (btn) {
+    setTimeout(() => {
+      btn.classList.add('show');
+    }, 300 + stanzas.length * 600 + 500);
+  }
+}
+
+// ===== ENVELOPE =====
+let envelopeOpened = false;
+function openEnvelope() {
+  if (envelopeOpened) return;
+  envelopeOpened = true;
+  document.getElementById('envelopeFlap').classList.add('open');
+  setTimeout(() => {
+    document.getElementById('envelopeWrapper').style.display = 'none';
+    document.getElementById('letterPaper').classList.add('show');
+  }, 900);
+}
+
+// ===== FLOATING HEARTS =====
+function startFloatingHearts() {
+  const hearts = ['💕', '💖', '💗', '🌸', '✨', '🌺', '💝'];
+  const interval = setInterval(() => {
+    if (currentStep !== 6) { clearInterval(interval); return; }
+    const h = document.createElement('div');
+    h.className = 'floating-heart';
+    h.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+    h.style.cssText = `
+      left: ${Math.random() * 90 + 5}%;
+      bottom: -40px;
+      font-size: ${Math.random() * 1 + 0.8}rem;
+      animation-duration: ${Math.random() * 4 + 4}s;
+    `;
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 8000);
+  }, 600);
+}
+
+function startMagicParticles() {
+  const particles = ['✨', '⭐', '🌟', '💫'];
+  const interval = setInterval(() => {
+    if (currentStep !== 8) { clearInterval(interval); return; }
+    const p = document.createElement('div');
+    p.className = 'magic-particle';
+    p.textContent = particles[Math.floor(Math.random() * particles.length)];
+    p.style.cssText = `
+      left: ${Math.random() * 95}%;
+      animation-duration: ${Math.random() * 6 + 6}s;
+    `;
+    document.body.appendChild(p);
+    setTimeout(() => p.remove(), 12000);
+  }, 800);
+}
+
+// ===== MUSIC =====
+let musicPlaying = false;
+function startMusic() {
+  const audio = document.getElementById('bgMusic');
+  audio.volume = 0.3;
+  audio.play().catch(() => {});
+  musicPlaying = true;
+}
+function toggleMusic() {
+  const audio = document.getElementById('bgMusic');
+  const btn = document.getElementById('musicBtn');
+  if (musicPlaying) {
+    audio.pause();
+    btn.classList.add('music-paused');
+    musicPlaying = false;
+  } else {
+    audio.play().catch(() => {});
+    btn.classList.remove('music-paused');
+    musicPlaying = true;
+  }
+}
+</script>
+</body>
+</html>
